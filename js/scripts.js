@@ -8,11 +8,11 @@ console.log("Wszystkie imiona: " + allNames);
 
 var newName = "Marian";
 
-if (allNames.indexOf("Marian") == -1) {
+if (allNames.indexOf(newName) === 1) {
 
-allNames.push("Marian");
-console.log("Lista z nowym imieniem:  " + allNames);
+allNames.push("Marek");
+	console.log("Lista z nowym imieniem:  " + allNames);
 
 } else {
-	console.log("Imię znajduje się już na liście");
+	console.log("Imię znajduje się już na liście");
 }
