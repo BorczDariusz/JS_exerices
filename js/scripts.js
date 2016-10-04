@@ -1,13 +1,11 @@
-var a = 1;
-var b = 5;
+
+var a = 5;
+var b = 10;
 var value = (a * a) + (2 * a * b) - (b * b);
 
 console.log("Wynik = " + value);
 
-if (value < 0) {
-    console.log("Wynik jest ujemny.");
-} else if (value === 0) {
+if (value < 0 ? console.log("Wynik jest ujemny.") : console.log("Wynik jest dodatni."));
+if (value === 0) {
 	console.log("Wynik jest równy zero.");
-} else {
-	console.log("Wynik jest dodatni.");
-}	
+} 
