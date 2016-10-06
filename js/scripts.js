@@ -2,14 +2,11 @@ var text = "Papugi koszą trawę, unosząc się nad ziemią 15 centymetrów, na 
 var animal = "Zielone słonie";
 var animalUpperCased = animal.toUpperCase();
 
-console.log(animalUpperCased);
+var textArray = text.split(" ");
+var firstWord = textArray[0];
 
-var firstWordfromText = text.slice(0,6);
-var textCharsAfter = text.replace(firstWordfromText, animalUpperCased);
-
-var halfOfText = textCharsAfter.length/2;
-console.log("Długość połowy tekstu: " + halfOfText);
-
-var newText = textCharsAfter.substr(0, 45); // możemy użyć również slice()
+var textCharsAfter = text.replace(firstWord, animalUpperCased);
+var halfOfText = textCharsAfter.length/2;  
+var newText = textCharsAfter.substr(0, halfOfText); 
 
 console.log(newText);
