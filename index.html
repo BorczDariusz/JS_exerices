@@ -1,12 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-
 	<head>
-		<meta charset="UTF-8">
-		<title> Zabawa z JS </title>
+    	<meta charset="UTF-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    	<meta name="description" content="Poznaj działanie flexboxa." />
+		<meta name="keywords" content="flex"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+		<title>Rock, paper, scissors</title>
 	</head>
-
 	<body>
+		<div class="container">
+  			<div class="text-center top text-uppercase">
+    			<h1>Welcome to the game</h1>
+          <h3>
+    			<span class="label label-warning">Rock</span>
+    			<span class="label label-info"> Paper</span>
+    			<span class="label label-danger"> Scissors</span>		
+          </h3>
+        </div>
+		</div>
+
+
+    <div class="container" id="js-sumGameEnded">
+      <div class="row">
+        <div class="col-xs-4 text-center">
+          <span id="js-winnerPlayerPoints">
+
+          </span> 
+        </div> 
+        <div class="col-xs-4 text-center result">
+          <span id="js-winnerConsole">
+
+          </span> 
+        </div> 
+        <div class="col-xs-4 text-center">
+          <span id="js-winnerComputerPoints">
+
+          </span> 
+        </div> 
+      </div>
+    </div>
+
+		<div id="js-newGameElement" class="container">
+  			<div class="row text-center">
+    			<button  id="js-newGameButton" class="btn btn-default">
+      			<strong>	PLAY </strong>
+    			</button>
+  			</div>
+		</div>
+
+		<div id="js-playerPickElement" class="container">
+			<div class="row text-center">
+				<button type="button" id="js-playerPick_rock" class="btn btn-warning">
+					<span class="badge">
+						<i class="fa fa-hand-rock-o" aria-hidden="true"></i>
+					</span>
+          <br>
+					ROCK
+				</button>
+				<button type="button" id="js-playerPick_paper"  class="btn btn-info">
+					<span class="badge">
+						<i class="fa fa-hand-paper-o" aria-hidden="true"></i>
+					</span>
+          <br>
+					PAPER
+				</button>
+				<button type="button" id="js-playerPick_scissors" class="btn btn-danger">
+					<span class="badge">
+						<i class="fa fa-hand-scissors-o" aria-hidden="true"></i>
+					</span>
+          <br>
+					SCISSORS
+				</button>
+			</div>
+		</div>
+
+		<div id="js-resultsTableElement" class="container">
+  			<div class="row">
+    			<div class="col-xs-5 text-center">
+      				<span id="js-playerPoints" class="badge">
+      					0
+      				</span>
+              <br>
+      				<span id="js-playerName" class="playersName">
+      				User Name
+      				</span>
+    			</div>
+    			<div class="col-xs-2 text-center">
+            <br>
+      				VS.
+    			</div>
+    			<div class="col-xs-5 text-center">
+      				<span id="js-computerPoints" class="badge">
+      					0
+      				</span>
+              <br>
+              <span class="playersName">
+      				  Computer
+              </span>
+    			</div>
+  			</div>
+  			<div class="row">
+    			<div class="col-xs-5 text-center">
+      				<span id="js-playerPick">
+        				
+      				</span>
+    			</div>
+    			<div class="col-xs-2">
+
+    			</div>
+    			<div class="col-xs-5 text-center">
+      				<span id="js-computerPick">
+        				
+      				</span>
+    			</div>
+  			</div>
+  			<div class="row">
+    			<div class="col-xs-5 text-center">
+      				<span id="js-playerResult" class="result">
+        			
+      				</span>
+    			</div>
+    			<div class="col-xs-2 text-center">
+              <span id="js-DrawResult" class="result">
+
+              </span>
+    			</div>
+   				<div class="col-xs-5 text-center">
+      				<span id="js-computerResult" class="result">
+
+      				</span>
+    			</div>
+  			</div>
+		</div>
 		<script src="js/scripts.js"></script>
 	</body>
 </html>
