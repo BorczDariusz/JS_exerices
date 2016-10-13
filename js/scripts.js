@@ -93,13 +93,10 @@ function checkRoundWinner(playerPick, computerPick) {
     }
 
     if (winnerIs == 'player') {
-        playerResultElem.innerHTML = "+1";
-        player.score++;
-        playerPointsElem.innerHTML = player.score;
+        setWinnerPlayer();
+
     } else if (winnerIs == 'computer') {
-        computerResultElem.innerHTML = "+1";
-        computer.score++;
-        computerPointsElem.innerHTML = computer.score;
+        setWinnerComputer();
     }
 
     if (player.score >= 10) {  
@@ -111,34 +108,34 @@ function checkRoundWinner(playerPick, computerPick) {
         setGameElements();
     }
 }
-console.log(computer.points);
-console.log(player.points);
 
+function setWinnerPlayer() {
+    player.score++;
+    playerResultElem.innerHTML = "+1";
+    playerPointsElem.innerHTML = player.score;
+}
+
+function setWinnerComputer() {
+    computerResultElem.innerHTML = "+1";
+    computer.score++;
+    computerPointsElem.innerHTML = computer.score;
+}
 
 function theWinnerIsComputer() {
     winnerConsoleElem.innerHTML = " You Lose!";
-    winnerComputerPointsElem.innerHTML = "Computer: " + computer.score; 
-    winnerPlayerPointsElem.innerHTML = "You: " + player.score;
-    gameState = 'ended';
-    playerResultElem.innerHTML = computerResultElem.innerHTML = drawResultElem.innerHTML = '';
+    resumeTheGame();
 }
 
 function theWinnerIsPlayer() {   
     winnerConsoleElem.innerHTML = " Victory!";
+    resumeTheGame();
+}
+
+function resumeTheGame() {
     winnerComputerPointsElem.innerHTML = "Computer: " + computer.score; 
     winnerPlayerPointsElem.innerHTML = "You: " + player.score;
     gameState = 'ended';
     playerResultElem.innerHTML = computerResultElem.innerHTML = drawResultElem.innerHTML = '';
-}
-
-function gameEnd() {
-    if (player.score >= 10) {
-        return true;
-    } else if (computer.score >= 10) {
-        return true;   
-    } else {
-        return false;
-    }
 }
 
 function playerPick(playerPick) {
